@@ -21,7 +21,7 @@ self.addEventListener('fetch', function(event) {
     // Respond to the request
     event.respondWith(
         fetch(event.request).catch(function() {
-            // Reutn cache
+            // Return cache
             return caches.match(event.request);
         })
     );
